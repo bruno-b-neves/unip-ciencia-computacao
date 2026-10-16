@@ -1,7 +1,17 @@
 # Relatório de Banco de Dados: Sistema de Adoção de Pets 🐾
 
 ### 1. Evolução dos Bancos de Dados
+<p>
+A evolução dos bancos de dados começou nas décadas de 1950 e 1960 com o armazenamento primitivo em fitas magnéticas e sistemas de arquivos de texto (flat files). Essa abordagem inicial era lenta, gerava alta redundância de dados e dependia de leitura sequencial, o que dificultava cruzamentos de informações. Para resolver a crescente complexidade corporativa, surgiram os primeiros Sistemas Gerenciadores de Bancos de Dados (SGBDs) baseados nos modelos hierárquico (estruturado como uma árvore de dependências, onde um "filho" só tem um "pai") e de rede (que já permitia múltiplos relacionamentos). Embora fossem um avanço no desempenho, essas arquiteturas eram extremamente rígidas e exigiam a reescrita de aplicações inteiras caso a estrutura de dados mudasse.
+</p>
 
+<p>
+O grande marco histórico ocorreu em 1970, quando Edgar F. Codd, pesquisador da IBM, propôs o Modelo Relacional. Esta abordagem revolucionou a tecnologia ao separar a estrutura lógica do armazenamento físico. Em vez de ponteiros complexos de navegação, os dados passaram a ser organizados em tabelas (entidades) bidimensionais, interligadas por chaves primárias e estrangeiras — exatamente a tecnologia aplicada neste projeto do sistema de adoção. Essa padronização, impulsionada pela linguagem SQL, garantiu maior integridade, consistência (regras ACID) e flexibilidade nas consultas, tornando os bancos de dados relacionais (como SQL Server, Oracle e MySQL) o padrão absoluto do mercado.
+</p>
+
+<p>
+Com a explosão da internet, do Big Data e das redes sociais nos anos 2000, o volume massivo e a variedade de informações exigiram novas abordagens que o modelo relacional tinha dificuldade em escalar horizontalmente a baixo custo. Surgiram assim os bancos de dados NoSQL (Not Only SQL), como MongoDB e Cassandra. Criados para oferecer alta escalabilidade e lidar com dados não estruturados ou semiestruturados, eles adotam formatos flexíveis como documentos, grafos, colunas e chave-valor. Atualmente, o mercado opera em um ecossistema híbrido: bancos relacionais continuam essenciais para transações consistentes e regras de negócio estruturadas, enquanto o NoSQL domina cenários de hiper-escala e agilidade no desenvolvimento.
+</p>
 
 ### 2. Modelagem de Dados
 
