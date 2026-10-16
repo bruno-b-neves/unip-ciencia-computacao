@@ -18,7 +18,7 @@ Com a explosão da internet, do Big Data e das redes sociais nos anos 2000, o vo
 #### Modelo Conceitual / Lógico
 Abaixo está o Diagrama Entidade-Relacionamento (DER) que define as regras de negócio e cardinalidades (1:N) do sistema de adoção:
 
-<table>
+<table align="center">
   <tr>
     <td align="center"><img src="../images/conceitual.png" alt="Descrição 1" width="400"/></td>
     <td align="center"><img src="../images/logico.png" alt="Descrição 2" width="400"/></td>
