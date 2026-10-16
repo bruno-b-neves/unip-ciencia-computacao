@@ -20,8 +20,8 @@ Abaixo está o Diagrama Entidade-Relacionamento (DER) que define as regras de ne
 
 <table>
   <tr>
-    <td><img src="../images/conceitual.png" alt="Descrição 1" width="400"/></td>
-    <td><img src="../images/logico.png" alt="Descrição 2" width="400"/></td>
+    <td align="center"><img src="../images/conceitual.png" alt="Descrição 1" width="400"/></td>
+    <td align="center"><img src="../images/logico.png" alt="Descrição 2" width="400"/></td>
   </tr>
 </table>
 
