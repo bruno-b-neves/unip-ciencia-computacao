@@ -1,17 +1,12 @@
 # Relatório de Banco de Dados: Sistema de Adoção de Pets 🐾
----
 
-## Roteiro 01 - Introdução e Fundamentação (Sistema de Adoção de Pets)
+### 1. Evolução dos Bancos de Dados
+
 
 ### 2. Modelagem de Dados
 
 #### Modelo Conceitual / Lógico
 Abaixo está o Diagrama Entidade-Relacionamento (DER) que define as regras de negócio e cardinalidades (1:N) do sistema de adoção:
-
-<!-- <div align="center">
-   Substitua pelo caminho do seu print 
-  <img src="docs/diagrama_conceitual.png" alt="Diagrama Conceitual" width="600" />
-</div> -->
 
 <table>
   <tr>
