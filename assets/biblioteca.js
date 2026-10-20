@@ -32,13 +32,28 @@
       </article>`).join('')}</div></section>`).join('');
   }
 
+  async function prepareBook(book) {
+    // O catálogo publicado já contém esses dados. Na pasta original, verifica os arquivos do livro.
+    if (typeof book.available === 'boolean') return book;
+    try {
+      const page = await fetch(`${book.path}/index.html`, { method: 'HEAD', cache: 'no-cache' });
+      if (!page.ok) return { ...book, available: false, chapters: 0 };
+      const response = await fetch(`${book.path}/README.md`, { cache: 'no-cache' });
+      const markdown = response.ok ? await response.text() : '';
+      const chapterLinks = [...markdown.matchAll(/\]\((?:\.\/)?(roteiro\d+)\/(?:README\.md)?(?:[?#][^)]*)?\)/g)];
+      const chapters = new Set(chapterLinks.map(match => match[1])).size;
+      return { ...book, available: true, chapters };
+    } catch {
+      return { ...book, available: false, chapters: 0 };
+    }
+  }
+
   async function init() {
     try {
-      const response = await fetch('catalogo.json');
+      const response = await fetch('catalogo.json', { cache: 'no-cache' });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const catalog = await response.json();
-      // A preparação do site calcula available e chapters com base nos arquivos reais.
-      books = catalog.books;
+      books = await Promise.all(catalog.books.map(prepareBook));
       const values = [...new Set(books.map(book => book.semester))].sort((a,b)=>a==null?1:b==null?-1:a-b);
       values.forEach(value => {
         const option = document.createElement('option');

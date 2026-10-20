@@ -1,0 +1,1162 @@
+[
+  {
+    "id": "r2-a",
+    "chapter": 2,
+    "title": "Parte I — expressão A",
+    "vars": [
+      "A",
+      "B",
+      "C"
+    ],
+    "formula": "S = ¬A·¬B + A·¬C + ¬A·C",
+    "rows": [
+      {
+        "input": [
+          0,
+          0,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          0,
+          0,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          0,
+          1,
+          0
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          0,
+          1,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          0,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          0,
+          1
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          1,
+          1,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          1,
+          1
+        ],
+        "output": 0
+      }
+    ],
+    "terms": [
+      [
+        0,
+        0,
+        null
+      ],
+      [
+        0,
+        null,
+        1
+      ],
+      [
+        1,
+        null,
+        0
+      ]
+    ],
+    "simplified": "¬A·¬B + ¬A·C + A·¬C"
+  },
+  {
+    "id": "r2-b",
+    "chapter": 2,
+    "title": "Parte I — expressão B",
+    "vars": [
+      "P",
+      "Q",
+      "R"
+    ],
+    "formula": "S = P·¬Q + P·¬(R·Q) + (¬P ⊕ R)",
+    "rows": [
+      {
+        "input": [
+          0,
+          0,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          0,
+          0,
+          1
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          0,
+          1,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          0,
+          1,
+          1
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          1,
+          0,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          0,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          1,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          1,
+          1
+        ],
+        "output": 1
+      }
+    ],
+    "terms": [
+      [
+        1,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        0
+      ]
+    ],
+    "simplified": "P + ¬R"
+  },
+  {
+    "id": "r2-c",
+    "chapter": 2,
+    "title": "Parte II — circuito A",
+    "vars": [
+      "A",
+      "B",
+      "C"
+    ],
+    "formula": "S = ¬(A+B)·(B ⊕ C)·¬C",
+    "rows": [
+      {
+        "input": [
+          0,
+          0,
+          0
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          0,
+          0,
+          1
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          0,
+          1,
+          0
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          0,
+          1,
+          1
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          1,
+          0,
+          0
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          1,
+          0,
+          1
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          1,
+          1,
+          0
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          1,
+          1,
+          1
+        ],
+        "output": 0
+      }
+    ],
+    "terms": [],
+    "simplified": "0"
+  },
+  {
+    "id": "r2-d",
+    "chapter": 2,
+    "title": "Parte II — circuito B",
+    "vars": [
+      "A",
+      "B"
+    ],
+    "formula": "S = (A·B) ⊕ ¬(A·B) ⊕ (A+B) ⊕ ¬(A+B)",
+    "rows": [
+      {
+        "input": [
+          0,
+          0
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          0,
+          1
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          1,
+          0
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          1,
+          1
+        ],
+        "output": 0
+      }
+    ],
+    "terms": [],
+    "simplified": "0"
+  },
+  {
+    "id": "r2-e",
+    "chapter": 2,
+    "title": "Parte II — circuito C",
+    "vars": [
+      "P",
+      "Q",
+      "R"
+    ],
+    "formula": "S = P·Q + ¬Q + ¬Q·¬(Q+R)",
+    "rows": [
+      {
+        "input": [
+          0,
+          0,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          0,
+          0,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          0,
+          1,
+          0
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          0,
+          1,
+          1
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          1,
+          0,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          0,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          1,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          1,
+          1
+        ],
+        "output": 1
+      }
+    ],
+    "terms": [
+      [
+        1,
+        null,
+        null
+      ],
+      [
+        null,
+        0,
+        null
+      ]
+    ],
+    "simplified": "P + ¬Q"
+  },
+  {
+    "id": "r3-a",
+    "chapter": 3,
+    "title": "Circuito I",
+    "vars": [
+      "A",
+      "B"
+    ],
+    "formula": "S = (A·B) + (A+B)",
+    "rows": [
+      {
+        "input": [
+          0,
+          0
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          0,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          1
+        ],
+        "output": 1
+      }
+    ],
+    "terms": [
+      [
+        1,
+        null
+      ],
+      [
+        null,
+        1
+      ]
+    ],
+    "simplified": "A + B"
+  },
+  {
+    "id": "r3-b",
+    "chapter": 3,
+    "title": "Circuito II",
+    "vars": [
+      "M",
+      "N"
+    ],
+    "formula": "S = [(M ⊕ N) ⊕ (M+N)] + M·N",
+    "rows": [
+      {
+        "input": [
+          0,
+          0
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          0,
+          1
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          1,
+          0
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          1,
+          1
+        ],
+        "output": 1
+      }
+    ],
+    "terms": [
+      [
+        1,
+        1
+      ]
+    ],
+    "simplified": "M·N"
+  },
+  {
+    "id": "r3-c",
+    "chapter": 3,
+    "title": "Circuito III",
+    "vars": [
+      "A",
+      "B",
+      "C"
+    ],
+    "formula": "S = ¬A·(B·C + ¬B·¬C) + A·(¬B·C + B·¬C)",
+    "rows": [
+      {
+        "input": [
+          0,
+          0,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          0,
+          0,
+          1
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          0,
+          1,
+          0
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          0,
+          1,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          0,
+          0
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          1,
+          0,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          1,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          1,
+          1
+        ],
+        "output": 0
+      }
+    ],
+    "terms": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ]
+    ],
+    "simplified": "¬A·¬B·¬C + ¬A·B·C + A·¬B·C + A·B·¬C"
+  },
+  {
+    "id": "r3-d",
+    "chapter": 3,
+    "title": "Circuito IV",
+    "vars": [
+      "P",
+      "Q",
+      "R"
+    ],
+    "formula": "S = ¬P·Q + (R ⊕ P) + P·¬Q·R",
+    "rows": [
+      {
+        "input": [
+          0,
+          0,
+          0
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          0,
+          0,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          0,
+          1,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          0,
+          1,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          0,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          0,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          1,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          1,
+          1
+        ],
+        "output": 0
+      }
+    ],
+    "terms": [
+      [
+        0,
+        1,
+        null
+      ],
+      [
+        1,
+        null,
+        0
+      ],
+      [
+        null,
+        0,
+        1
+      ]
+    ],
+    "simplified": "¬P·Q + P·¬R + ¬Q·R"
+  },
+  {
+    "id": "r3-e",
+    "chapter": 3,
+    "title": "Circuito V",
+    "vars": [
+      "X",
+      "Y",
+      "Z"
+    ],
+    "formula": "S = X·(Y·Z + ¬Z·¬X) + [X ⊕ (¬Y+Z)] + X·¬Z",
+    "rows": [
+      {
+        "input": [
+          0,
+          0,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          0,
+          0,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          0,
+          1,
+          0
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          0,
+          1,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          0,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          0,
+          1
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          1,
+          1,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          1,
+          1
+        ],
+        "output": 1
+      }
+    ],
+    "terms": [
+      [
+        0,
+        0,
+        null
+      ],
+      [
+        1,
+        null,
+        0
+      ],
+      [
+        null,
+        1,
+        1
+      ]
+    ],
+    "simplified": "¬X·¬Y + X·¬Z + Y·Z"
+  },
+  {
+    "id": "r4-a",
+    "chapter": 4,
+    "title": "Circuito I",
+    "vars": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "formula": "S = ¬A·B·(¬C+D) + (¬A+¬B)·C·¬D + (A+B)·(C+¬D) + A·B·¬C·¬D",
+    "rows": [
+      {
+        "input": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "output": 1
+      }
+    ],
+    "terms": [
+      [
+        0,
+        1,
+        null,
+        null
+      ],
+      [
+        1,
+        null,
+        1,
+        null
+      ],
+      [
+        1,
+        null,
+        null,
+        0
+      ],
+      [
+        null,
+        null,
+        1,
+        0
+      ]
+    ],
+    "simplified": "¬A·B + A·C + A·¬D + C·¬D"
+  },
+  {
+    "id": "r4-b",
+    "chapter": 4,
+    "title": "Circuito II",
+    "vars": [
+      "X",
+      "Y",
+      "W",
+      "Z"
+    ],
+    "formula": "S = (X ⊕ Y)·(Z+W) + (X ⊕ Z)·(Y+W) + (Y ⊕ Z)·(Z+W) + (W ⊕ Z)·(Y+X)",
+    "rows": [
+      {
+        "input": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "output": 0
+      },
+      {
+        "input": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "output": 1
+      },
+      {
+        "input": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "output": 0
+      }
+    ],
+    "terms": [
+      [
+        0,
+        1,
+        1,
+        null
+      ],
+      [
+        0,
+        null,
+        null,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        null
+      ],
+      [
+        1,
+        1,
+        null,
+        0
+      ],
+      [
+        null,
+        null,
+        0,
+        1
+      ]
+    ],
+    "simplified": "¬X·Y·W + ¬X·Z + X·¬Y·W + X·Y·¬Z + ¬W·Z"
+  }
+]

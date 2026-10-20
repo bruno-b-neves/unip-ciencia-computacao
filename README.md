@@ -8,7 +8,7 @@ Meus estudos em Ciência da Computação na UNIP, organizados em livros por disc
 
 ### 1º semestre
 
-- **Circuitos Lógicos:** em preparação.
+- **[Circuitos Lógicos](circuitos-logicos/README.md):** oito roteiros com portas lógicas, Karnaugh, codificação e operações binárias, com imagens e laboratórios interativos.
 - **[Introdução à Programação Estruturada](introducao-programacao-estruturada/README.md):** doze roteiros de Python, dos primeiros comandos ao SQLite.
 
 ### 2º semestre

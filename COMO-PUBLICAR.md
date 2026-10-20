@@ -11,6 +11,7 @@ O site tem uma página inicial com o catálogo de disciplinas e uma página inde
 Endereços previstos após publicar:
 
 - [Catálogo de aprendizados](https://bruno-b-neves.github.io/unip-ciencia-computacao/)
+- [Livro de Circuitos Lógicos](https://bruno-b-neves.github.io/unip-ciencia-computacao/circuitos-logicos/)
 - [Livro de Introdução à Programação Estruturada](https://bruno-b-neves.github.io/unip-ciencia-computacao/introducao-programacao-estruturada/)
 - [Livro de Banco de Dados](https://bruno-b-neves.github.io/unip-ciencia-computacao/banco-de-dados/)
 
@@ -57,6 +58,12 @@ Os textos ficam em `introducao-programacao-estruturada/README.md` e nos READMEs 
 
 Para acrescentar ou reorganizar capítulos, atualize a lista `chapters` em `introducao-programacao-estruturada/book/book.js` e a tabela de roteiros do README principal da disciplina. O fluxo existente inclui este livro automaticamente na próxima publicação.
 
+## Livro de Circuitos Lógicos
+
+Edite a apresentação em `circuitos-logicos/README.md` e os capítulos de `roteiro01` a `roteiro08`. As imagens ficam agrupadas em `circuitos-logicos/images`, com legendas e origem documentadas no README dessa pasta. Não inclua PDFs pessoais ou endereços privados do Drive.
+
+Os laboratórios estão em `book/labs.js`, as funções lógicas em `book/logic.js` e as expressões e mapas em `book/cases.json`. O leitor utiliza os mesmos recursos locais dos outros livros. O catálogo inclui automaticamente o livro no 1º semestre durante a publicação.
+
 ## Verificação
 
 Para verificar a seleção dos livros para publicação:
@@ -66,3 +73,9 @@ python3 -m unittest discover -s tests
 ```
 
 Referência: [GitHub Pages com GitHub Actions](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+
+Para conferir os modelos lógicos e a integridade do novo livro:
+
+```sh
+node --test tests/circuitos-logic.test.cjs
+```

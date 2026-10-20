@@ -1,0 +1,237 @@
+{
+  "1": [
+    {
+      "file": "../images/roteiro01/and-p02-01.png",
+      "caption": "AND — registro original, página 2, imagem 1.",
+      "width": 234,
+      "height": 526
+    },
+    {
+      "file": "../images/roteiro01/and-p02-02.png",
+      "caption": "AND — registro original, página 2, imagem 2.",
+      "width": 362,
+      "height": 324
+    },
+    {
+      "file": "../images/roteiro01/and-p03-01.png",
+      "caption": "AND — registro original, página 3, imagem 1.",
+      "width": 442,
+      "height": 307
+    },
+    {
+      "file": "../images/roteiro01/and-p03-02.png",
+      "caption": "AND — registro original, página 3, imagem 2.",
+      "width": 442,
+      "height": 312
+    },
+    {
+      "file": "../images/roteiro01/nand-p04-01.png",
+      "caption": "NAND — registro original, página 4, imagem 1.",
+      "width": 307,
+      "height": 272
+    },
+    {
+      "file": "../images/roteiro01/nand-p04-02.png",
+      "caption": "NAND — registro original, página 4, imagem 2.",
+      "width": 509,
+      "height": 301
+    },
+    {
+      "file": "../images/roteiro01/nand-p05-01.png",
+      "caption": "NAND — registro original, página 5, imagem 1.",
+      "width": 412,
+      "height": 298
+    },
+    {
+      "file": "../images/roteiro01/nand-p05-02.png",
+      "caption": "NAND — registro original, página 5, imagem 2.",
+      "width": 393,
+      "height": 248
+    },
+    {
+      "file": "../images/roteiro01/or-p06-01.png",
+      "caption": "OR — registro original, página 6, imagem 1.",
+      "width": 260,
+      "height": 293
+    },
+    {
+      "file": "../images/roteiro01/or-p06-02.png",
+      "caption": "OR — registro original, página 6, imagem 2.",
+      "width": 388,
+      "height": 317
+    },
+    {
+      "file": "../images/roteiro01/or-p06-03.png",
+      "caption": "OR — registro original, página 6, imagem 3.",
+      "width": 245,
+      "height": 275
+    },
+    {
+      "file": "../images/roteiro01/or-p07-01.png",
+      "caption": "OR — registro original, página 7, imagem 1.",
+      "width": 148,
+      "height": 204
+    },
+    {
+      "file": "../images/roteiro01/or-p07-02.png",
+      "caption": "OR — registro original, página 7, imagem 2.",
+      "width": 175,
+      "height": 255
+    },
+    {
+      "file": "../images/roteiro01/or-p07-03.png",
+      "caption": "OR — registro original, página 7, imagem 3.",
+      "width": 171,
+      "height": 243
+    },
+    {
+      "file": "../images/roteiro01/or-p07-04.png",
+      "caption": "OR — registro original, página 7, imagem 4.",
+      "width": 171,
+      "height": 249
+    },
+    {
+      "file": "../images/roteiro01/nor-p08-01.png",
+      "caption": "NOR — registro original, página 8, imagem 1.",
+      "width": 341,
+      "height": 349
+    },
+    {
+      "file": "../images/roteiro01/nor-p09-01.png",
+      "caption": "NOR — registro original, página 9, imagem 1.",
+      "width": 316,
+      "height": 396
+    },
+    {
+      "file": "../images/roteiro01/xor-p10-01.png",
+      "caption": "XOR — registro original, página 10, imagem 1.",
+      "width": 373,
+      "height": 371
+    },
+    {
+      "file": "../images/roteiro01/xor-p11-01.png",
+      "caption": "XOR — registro original, página 11, imagem 1.",
+      "width": 322,
+      "height": 400
+    },
+    {
+      "file": "../images/roteiro01/xnor-p12-01.png",
+      "caption": "XNOR — registro original, página 12, imagem 1.",
+      "width": 380,
+      "height": 382
+    },
+    {
+      "file": "../images/roteiro01/xnor-p13-01.png",
+      "caption": "XNOR — registro original, página 13, imagem 1.",
+      "width": 278,
+      "height": 343
+    }
+  ],
+  "2": [
+    {
+      "file": "../images/roteiro02/circuito-a-p16-01.png",
+      "caption": "Circuito a — registro original, página 16, imagem 1.",
+      "width": 307,
+      "height": 202
+    },
+    {
+      "file": "../images/roteiro02/circuito-b-p17-01.png",
+      "caption": "Circuito b — registro original, página 17, imagem 1.",
+      "width": 292,
+      "height": 192
+    },
+    {
+      "file": "../images/roteiro02/circuito-c-p18-01.png",
+      "caption": "Circuito c — registro original, página 18, imagem 1.",
+      "width": 252,
+      "height": 219
+    },
+    {
+      "file": "../images/roteiro02/leis-idempotencia-absorcao-p19-01.png",
+      "caption": "Leis idempotencia absorcao — registro original, página 19, imagem 1.",
+      "width": 192,
+      "height": 144
+    },
+    {
+      "file": "../images/roteiro02/leis-idempotencia-absorcao-p19-02.png",
+      "caption": "Leis idempotencia absorcao — registro original, página 19, imagem 2.",
+      "width": 224,
+      "height": 225
+    },
+    {
+      "file": "../images/roteiro02/lei-associativa-p20-01.png",
+      "caption": "Lei associativa — registro original, página 20, imagem 1.",
+      "width": 435,
+      "height": 211
+    },
+    {
+      "file": "../images/roteiro02/leis-de-morgan-p21-01.png",
+      "caption": "Leis de morgan — registro original, página 21, imagem 1.",
+      "width": 527,
+      "height": 203
+    }
+  ],
+  "3": [
+    {
+      "file": "../images/roteiro03/circuitos-i-ii-p22-01.png",
+      "caption": "Circuitos i ii — registro original, página 22, imagem 1.",
+      "width": 241,
+      "height": 168
+    },
+    {
+      "file": "../images/roteiro03/circuitos-i-ii-p22-02.png",
+      "caption": "Circuitos i ii — registro original, página 22, imagem 2.",
+      "width": 287,
+      "height": 246
+    },
+    {
+      "file": "../images/roteiro03/circuito-iii-p23-01.png",
+      "caption": "Circuito iii — registro original, página 23, imagem 1.",
+      "width": 389,
+      "height": 381
+    },
+    {
+      "file": "../images/roteiro03/circuito-iv-p24-01.png",
+      "caption": "Circuito iv — registro original, página 24, imagem 1.",
+      "width": 331,
+      "height": 315
+    },
+    {
+      "file": "../images/roteiro03/circuito-v-p25-01.png",
+      "caption": "Circuito v — registro original, página 25, imagem 1.",
+      "width": 378,
+      "height": 317
+    }
+  ],
+  "4": [
+    {
+      "file": "../images/roteiro04/circuito-i-p27-01.png",
+      "caption": "Circuito i — registro original, página 27, imagem 1.",
+      "width": 352,
+      "height": 454
+    },
+    {
+      "file": "../images/roteiro04/circuito-ii-p29-01.png",
+      "caption": "Circuito ii — registro original, página 29, imagem 1.",
+      "width": 351,
+      "height": 518
+    }
+  ],
+  "5": [
+    {
+      "file": "../images/roteiro05/codificador-bcd-p31-01.png",
+      "caption": "Codificador bcd — registro original, página 31, imagem 1.",
+      "width": 528,
+      "height": 385
+    },
+    {
+      "file": "../images/roteiro05/codificador-hexadecimal-p33-01.png",
+      "caption": "Codificador hexadecimal — registro original, página 33, imagem 1.",
+      "width": 722,
+      "height": 450
+    }
+  ],
+  "6": [],
+  "7": [],
+  "8": []
+}

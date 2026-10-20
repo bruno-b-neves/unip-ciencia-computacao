@@ -19,9 +19,11 @@
       "path": "circuitos-logicos",
       "title": "Circuitos Lógicos",
       "semester": 1,
-      "description": "Espaço reservado para organizar os estudos e as atividades da disciplina de Circuitos Lógicos.",
+      "description": "Oito roteiros visuais: portas lógicas, Karnaugh, codificadores, display e circuitos aritméticos, com imagens e laboratórios interativos.",
       "topics": [
-        "Lógica digital"
+        "CircuitVerse",
+        "Álgebra booleana",
+        "Circuitos digitais"
       ]
     },
     {
