@@ -1,3 +1,10 @@
+<div class="book-navigation">
+  <a href="../README.md">📖 Sumário</a> ·
+  <a href="../roteiro02/README.md">Próximo capítulo →</a>
+</div>
+
+---
+
 # Relatório de Banco de Dados: Sistema de Adoção de Pets 🐾
 
 ### 1. Evolução dos Bancos de Dados
@@ -132,3 +139,10 @@ CREATE TABLE Adocao (
 );
 GO
 ```
+
+---
+
+<div class="book-navigation">
+  <a href="../README.md">📖 Sumário</a> ·
+  <a href="../roteiro02/README.md">Próximo capítulo →</a>
+</div>

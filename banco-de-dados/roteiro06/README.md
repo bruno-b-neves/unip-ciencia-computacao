@@ -1,3 +1,11 @@
+<div class="book-navigation">
+  <a href="../roteiro05/README.md">← Capítulo anterior</a> ·
+  <a href="../README.md">📖 Sumário</a> ·
+  <a href="../roteiro07/README.md">Próximo capítulo →</a>
+</div>
+
+---
+
 # Relatório Prático: Criação e Manutenção de Views (Visões Tabulares) 🍕
 
 ## 1. Introdução
@@ -67,3 +75,11 @@ SELECT
 FROM Pizza;
 GO
 ```
+
+---
+
+<div class="book-navigation">
+  <a href="../roteiro05/README.md">← Capítulo anterior</a> ·
+  <a href="../README.md">📖 Sumário</a> ·
+  <a href="../roteiro07/README.md">Próximo capítulo →</a>
+</div>

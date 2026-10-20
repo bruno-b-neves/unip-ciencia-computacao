@@ -1,3 +1,10 @@
+<div class="book-navigation">
+  <a href="../roteiro07/README.md">← Capítulo anterior</a> ·
+  <a href="../README.md">📖 Sumário</a>
+</div>
+
+---
+
 # Relatório Prático — Controle de Acesso com DCL: Bella Napoli
 
 ## 1. Objetivo e ambiente
@@ -73,3 +80,10 @@ O `REVOKE` remove uma concessão ou negação explícita; ele não equivale a um
 ## 3. Análise crítica
 
 Restringir o comando `DELETE` é importante porque uma exclusão indevida pode comprometer o histórico de pedidos, os registros dos clientes e a confiabilidade das informações utilizadas pela empresa. Na rotina de uma pizzaria, o atendente deve receber as permissões necessárias às suas atividades, enquanto operações de exclusão devem ficar sob responsabilidade de pessoas autorizadas e seguir regras de controle. Essa separação reduz o risco de perdas causadas por enganos ou uso indevido. O exercício também mostra que revogar uma permissão não é o mesmo que proibir uma operação: para garantir o controle, é necessário verificar o acesso efetivo de cada perfil e considerar as permissões recebidas por funções e outras origens.
+
+---
+
+<div class="book-navigation">
+  <a href="../roteiro07/README.md">← Capítulo anterior</a> ·
+  <a href="../README.md">📖 Sumário</a>
+</div>

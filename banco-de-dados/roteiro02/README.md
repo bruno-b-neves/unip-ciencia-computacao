@@ -1,3 +1,11 @@
+<div class="book-navigation">
+  <a href="../roteiro01/README.md">← Capítulo anterior</a> ·
+  <a href="../README.md">📖 Sumário</a> ·
+  <a href="../roteiro03/README.md">Próximo capítulo →</a>
+</div>
+
+---
+
 # Relatório Prático: Sistema de Gestão de Livraria Digital 📚
 
 ## 1. Teoria de Relacionamentos e Cardinalidade
@@ -93,3 +101,11 @@ CREATE TABLE Item_Pedido(
 );
 GO
 ```
+
+---
+
+<div class="book-navigation">
+  <a href="../roteiro01/README.md">← Capítulo anterior</a> ·
+  <a href="../README.md">📖 Sumário</a> ·
+  <a href="../roteiro03/README.md">Próximo capítulo →</a>
+</div>

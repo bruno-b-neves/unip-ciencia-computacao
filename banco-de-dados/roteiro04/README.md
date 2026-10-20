@@ -1,3 +1,11 @@
+<div class="book-navigation">
+  <a href="../roteiro03/README.md">← Capítulo anterior</a> ·
+  <a href="../README.md">📖 Sumário</a> ·
+  <a href="../roteiro05/README.md">Próximo capítulo →</a>
+</div>
+
+---
+
 # Relatório Prático: Comandos DML (Parte II) - Filtros e Operadores 🍕
 
 ## 1. Introdução
@@ -80,3 +88,11 @@ SELECT * FROM Pedido
 WHERE status != 'Finalizado';
 GO
 ```
+
+---
+
+<div class="book-navigation">
+  <a href="../roteiro03/README.md">← Capítulo anterior</a> ·
+  <a href="../README.md">📖 Sumário</a> ·
+  <a href="../roteiro05/README.md">Próximo capítulo →</a>
+</div>

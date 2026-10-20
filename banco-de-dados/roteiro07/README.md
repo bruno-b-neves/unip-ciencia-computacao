@@ -1,3 +1,11 @@
+<div class="book-navigation">
+  <a href="../roteiro06/README.md">← Capítulo anterior</a> ·
+  <a href="../README.md">📖 Sumário</a> ·
+  <a href="../roteiro08/README.md">Próximo capítulo →</a>
+</div>
+
+---
+
 # Relatório Prático — Stored Procedures: Bella Napoli
 
 ## 1. Objetivo e ambiente
@@ -167,3 +175,11 @@ WHERE ped.id_Pedido IN (7, 8);
 ## 5. Análise crítica
 
 As stored procedures facilitam a rotina do pizzaiolo porque padronizam o registro dos pedidos, garantindo que cada novo pedido entre com o status Em Preparação e a data atual, sem exigir o preenchimento manual dessas informações. Isso ajuda a identificar os pedidos que ainda precisam ser preparados e reduz erros de cadastro. No atendimento e no caixa, o fechamento automatizado calcula o valor e aplica o desconto VIP de maneira consistente, reduzindo contas manuais e permitindo que a equipe se concentre no preparo e na entrega. Nesta solução, a identificação VIP depende da informação fornecida pelo atendente; consultar essa condição no cadastro do cliente seria uma melhoria para reduzir erros de preenchimento.
+
+---
+
+<div class="book-navigation">
+  <a href="../roteiro06/README.md">← Capítulo anterior</a> ·
+  <a href="../README.md">📖 Sumário</a> ·
+  <a href="../roteiro08/README.md">Próximo capítulo →</a>
+</div>
