@@ -1,83 +1,87 @@
-# Roteiro 02 — Variáveis, Tipos de Dados e Operações em Python
+# Roteiro 02 — Variáveis, tipos de dados e operações
 
 **Disciplina:** Introdução à Programação Estruturada · **Semestre:** 1º · **Aluno:** Bruno Neves
 
 ## 1. Resumo teórico
 
-Variáveis são nomes associados a valores que podem ser utilizados e atualizados durante a execução. Em Python, o tipo pertence ao objeto associado à variável e é identificado a partir do valor atribuído. Os tipos básicos estudados foram `int`, para números inteiros, como `357`; `float`, para números de ponto flutuante, como `1.75`; `str`, para textos, como `"Bruno"`; e `bool`, para valores lógicos, `True` ou `False`, utilizados nas condições de validação.
+Variáveis associam nomes a valores usados no programa. Em Python, o tipo pertence ao valor: `int` representa inteiros; `float`, números com parte decimal; `str`, textos; e `bool`, os valores lógicos `True` e `False`. O tipo booleano é apresentado na teoria, mas não é usado diretamente nestas soluções.
 
-A função `input()` lê uma entrada e retorna uma string. Para realizar cálculos, a conversão de tipos (*type casting*) transforma essa entrada com `int()` ou `float()`. Uma conversão incompatível gera `ValueError`, que pode ser tratado com `try/except`. A função `print()` apresenta os resultados, e as f-strings permitem inserir variáveis e definir a formatação, como `.2f` para duas casas decimais. Nas operações, `/` realiza divisão, `//` retorna o quociente arredondado para baixo, `%` calcula o resto e `**` representa a potenciação.
+A função `input()` lê dados como texto. A conversão de tipos, ou *type casting*, usa funções como `int()` e `float()` para permitir cálculos. A função `print()` exibe os resultados, e f-strings podem formatá-los com `.2f`. Nos cálculos, `/` faz divisão, `//` obtém o quociente inteiro, `%` obtém o resto e `**` calcula uma potência. Combinar divisão inteira e resto permite separar dígitos e obter bits sem usar bibliotecas.
 
 ## 2. Código-fonte comentado
 
-A versão abaixo reúne as quatro soluções e acrescenta validação às entradas do código fornecido. A função `ler_numero()` centraliza a conversão, verifica os limites e solicita uma nova tentativa quando necessário.
+O arquivo reúne consumo médio, decomposição de um número de três dígitos, cálculo de IMC e conversão decimal para binário de 0 a 15. A solução usa operações básicas, sem funções próprias ou bibliotecas.
+
+### Desafio inicial e ampliação
+
+Arquivo: [variaveis-tipo-operacoes.py](variaveis-tipo-operacoes.py).
 
 ```python
-"""Roteiro 2: variáveis, tipos de dados, entradas e operações em Python."""
+# Consumo Médio de Combustível
+# Este programa calcula o consumo médio de combustível de um veículo com base na
+# distância percorrida e na quantidade de combustível consumida. O consumo médio
+# é calculado dividindo a distância percorrida pela quantidade de combustível
+# consumida.
 
-# Repete a leitura até receber o tipo e o intervalo esperados.
-def ler_numero(mensagem, tipo, minimo, maximo=None, incluir_minimo=True):
-    while True:
-        try:
-            # input() retorna str; int() ou float() realiza a conversão.
-            # A troca permite usar vírgula ou ponto nos números decimais.
-            valor = tipo(input(mensagem).replace(",", "."))
-            limite_inferior = valor >= minimo if incluir_minimo else valor > minimo
-            limite_superior = maximo is None or valor <= maximo
-            if limite_inferior and limite_superior:
-                return valor
-            print("Valor fora do intervalo solicitado. Tente novamente.")
-        except ValueError:
-            # Uma conversão inválida gera ValueError, tratado sem encerrar o programa.
-            print("Entrada inválida. Digite um número do tipo solicitado.")
+combustivel = float(input('Digite a quantidade de combustível abastecida (em litros): ')) # Solicita ao usuário que digite a quantidade de combustível abastecida
+distancia = float(input('Digite a distância percorrida (em km): ')) # Solicita ao usuário que digite a distância percorrida
 
+medio = distancia / combustivel # Calcula o consumo médio de combustível
 
-# DESAFIO INICIAL — Consumo médio: distância dividida pelos litros consumidos.
-# Litros devem ser positivos; distância pode ser zero. .2f exibe duas casas decimais.
-litros_consumidos = ler_numero("Combustível consumido em litros (> 0): ", float, 0, incluir_minimo=False)
-distancia_km = ler_numero("Distância percorrida em km (>= 0): ", float, 0)
-consumo_medio = distancia_km / litros_consumidos
-print(f"Consumo médio: {consumo_medio:.2f} km/l")
+print(f'O consumo médio de combustível do veículo é: {medio:.2f} km/l') # Exibe o consumo médio de combustível com duas casas decimais
 
-# DESAFIO INICIAL — Decomposição: // obtém o quociente inteiro e % obtém o resto.
-# O intervalo de 100 a 999 garante um número positivo de três dígitos.
-numero = ler_numero("Número inteiro de três dígitos (100 a 999): ", int, 100, 999)
-centena = numero // 100
-dezena = (numero % 100) // 10
-unidade = numero % 10
-print(f"{'Centena':<10}| {'Dezena':<10}| {'Unidade':<10}")
-print("-" * 34)
-print(f"{centena:<10}| {dezena:<10}| {unidade:<10}")
+# Decompondo um Número de Três Dígitos
+# Este programa solicita ao usuário que digite um número inteiro de três dígitos
+# e, em seguida, decompõe esse número em suas centenas, dezenas e unidades. O
+# programa utiliza operações matemáticas para extrair cada dígito do número e
+# exibe os resultados na tela.
 
-# AMPLIAÇÃO — IMC: peso em kg dividido pelo quadrado da altura em metros.
-# Valores positivos evitam dados negativos e divisão por zero.
-peso_kg = ler_numero("Peso em kg (> 0): ", float, 0, incluir_minimo=False)
-altura_m = ler_numero("Altura em metros (> 0): ", float, 0, incluir_minimo=False)
-imc = peso_kg / altura_m ** 2
-print(f"IMC: {imc:.2f}")
+numero = int(input('Digite um número inteiro de três dígitos: (ex: 357) ')) # Solicita ao usuário que digite um número inteiro de três dígitos
 
-# AMPLIAÇÃO — Binário: divisões sucessivas por 2 extraem quatro bits.
-# Os restos surgem do bit menos significativo para o mais significativo.
-decimal = ler_numero("Número inteiro decimal (0 a 15): ", int, 0, 15)
-bit_0 = decimal % 2
-quociente = decimal // 2
-bit_1 = quociente % 2
-quociente = quociente // 2
-bit_2 = quociente % 2
-quociente = quociente // 2
-bit_3 = quociente % 2
-print(f"Binário: {bit_3}{bit_2}{bit_1}{bit_0}")
+centena = numero // 100 # Calcula a centena do número
+dezena = (numero % 100) // 10 # Calcula a dezena do número
+unidade = numero % 10 # Calcula a unidade do número
+
+print(f"{'Centena':<10}| {'Dezena':<10}| {'Unidade':<10}", sep="\t") # Exibe a centena do número com alinhamento à esquerda
+print("-" * 35) # Exibe uma linha separadora
+print(f"{centena:<10}| {dezena:<10}| {unidade:<10}", sep="\t") # Exibe a dezena do número com alinhamento à esquerda
+
+# * Ampliação do Desafio
+# * Cálculo de IMC (Índice de Massa Corporal) *
+# ? Este programa solicita ao usuário que digite seu peso (em kg) e altura
+# ? (em metros) e, em seguida, calcula o Índice de Massa Corporal (IMC)
+# ? utilizando a fórmula: IMC = peso / altura ** 2. O programa exibe o
+# ? resultado do IMC na tela com duas casas decimais.
+
+peso = float(input('Digite seu peso (em kg): ')) # Solicita ao usuário que digite seu peso
+altura = float(input('Digite sua altura (em metros): ')) # Solicita ao usuário que digite sua altura
+
+imc = peso / altura ** 2
+
+print(f'Seu IMC é: {imc:.2f}') # Exibe o resultado do IMC com duas casas decimais
+
+# * Conversão de decimal para binário (0 a 15)
+# ? Este programa solicita ao usuário que digite um número inteiro decimal entre
+# ? 0 e 15 e, em seguida, converte esse número para sua representação binária.
+# ? O programa exibe o resultado na tela.
+
+decimal = int(input('Digite um número inteiro decimal entre 0 e 15: ')) # Solicita ao usuário que digite um número inteiro decimal entre 0 e 15
+
+b0 = decimal % 2 # Calcula o bit menos significativo (b0)
+num = decimal // 2 # Atualiza o número dividindo por 2
+b1 = num % 2 # Calcula o bit 1
+num = num // 2 # Atualiza o número dividindo por 2
+b2 = num % 2 # Calcula o bit 2
+num = num // 2 # Atualiza o número dividindo por 2
+b3 = num % 2 # Calcula o bit 3
+
+print(f"{b3}{b2}{b1}{b0}")
 ```
 
-## 3. Verificação e aprimoramentos
+## 3. Verificação da solução e limitações
 
-A execução foi testada com os seguintes dados e resultados:
+Foram informados, em sequência, `40` litros, `480` km, o número `357`, peso `70`, altura `1.75` e decimal `13`. Os resultados foram `12.00 km/l`, dígitos `3`, `5` e `7`, IMC `22.86` e binário `1101`.
 
-| Solução | Entradas | Resultado |
-| --- | --- | --- |
-| Consumo médio | 480 km e 40 litros consumidos | 12.00 km/l |
-| Decomposição | 357 | Centena 3, dezena 5 e unidade 7 |
-| IMC | 70 kg e 1.75 m | 22.86 |
-| Decimal para binário | 13 | 1101 |
+O exercício evidencia a necessidade de converter os textos de entrada antes de calcular. A versão pressupõe combustível e altura maiores que zero, número de três dígitos e decimal entre 0 e 15. Não há validação desses limites nem tratamento de entradas não numéricas. O cálculo de IMC é apenas uma atividade de operações aritméticas.
 
-Também foram verificados os limites `100` e `999` na decomposição e `0` e `15` na conversão binária, resultando em `0000` e `1111`. As validações rejeitam textos incompatíveis, valores negativos indevidos, números não finitos e valores fora dos intervalos. Combustível, peso e altura precisam ser positivos, evitando divisão por zero. Como aprimoramentos, o programa permite nova tentativa após erros e aceita vírgula ou ponto na entrada de números decimais.
+**Referência:** [Roteiros de aulas práticas — Introdução à Programação Estruturada](https://drive.google.com/file/d/1wm81dvjvkJURknlRIfU1XtUoBKhSsev1/view), roteiro 02, item 6.

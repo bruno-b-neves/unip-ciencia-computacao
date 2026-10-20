@@ -1,16 +1,20 @@
-# Relatório Prático — Ambiente de Programação e Saídas em Python
+# Roteiro 01 — Saídas e formatação com print()
 
 **Disciplina:** Introdução à Programação Estruturada · **Semestre:** 1º · **Aluno:** Bruno Neves
 
 ## 1. Resumo teórico
 
-A função `print()` exibe informações na saída padrão, normalmente o console. Ela permite apresentar textos entre aspas, valores de variáveis e resultados de expressões. Quando recebe vários argumentos, utiliza um espaço entre eles por padrão e termina a saída com uma quebra de linha.
+A função `print()` apresenta textos, valores de variáveis e resultados de expressões na saída padrão, normalmente o terminal. Strings literais ficam entre aspas; variáveis são informadas pelo nome. Por padrão, vários argumentos são separados por um espaço e a saída termina com uma quebra de linha.
 
-O parâmetro `sep` altera o separador entre os argumentos, como em `print(nome, cidade, sep=" - ")`. O parâmetro `end` define como a saída termina; neste exercício, `end=".\n"` acrescenta um ponto e uma quebra de linha. O método `.format()` insere valores nos campos `{}` de uma string e permite configurar sua apresentação. Já as **f-strings**, identificadas pelo prefixo `f`, permitem inserir variáveis ou expressões diretamente entre chaves. Os formatos `.2f`, `03d` e `<15` representam, respectivamente, duas casas decimais, um inteiro com pelo menos três dígitos preenchidos com zeros e alinhamento à esquerda em uma largura mínima de 15 caracteres.
+O parâmetro `sep` troca o separador entre argumentos, e `end` determina como a saída termina. Neste exercício, `sep=" - "` separa os dados por hífens e `end=".\n"` acrescenta ponto e quebra de linha. O método `.format()` substitui campos entre chaves; as f-strings, com prefixo `f`, inserem variáveis ou expressões diretamente na mensagem. Os formatos `.2f`, `03d` e `<15` apresentam, respectivamente, duas casas decimais, inteiro com largura mínima de três posições preenchidas com zeros e alinhamento à esquerda em quinze posições.
 
 ## 2. Código-fonte comentado
 
-O programa apresenta dados cadastrados, solicita nome, idade e cor favorita e exibe uma mensagem personalizada e uma tabela. A cópia abaixo corrige a unidade da altura para metros, completa os comentários e ajusta a linha separadora à largura da tabela.
+O programa apresenta dados pessoais, solicita nome, idade e cor favorita e monta mensagens e uma tabela. Os comentários explicam cada forma de saída.
+
+### Programa completo
+
+Arquivo: [programacao-saidas.py](programacao-saidas.py).
 
 ```python
 """Exibe dados e explora a formatação de saídas com print() em Python."""
@@ -56,6 +60,15 @@ print(f"{userNome:<15}| {userIdade:<15}| {userCor:<15}")
 
 ## 3. Resultados e discussão
 
-A execução foi validada com as entradas **Bruno**, **30** e **Azul**, sem erros. A idade cadastrada foi apresentada como `030`, a altura como `1.70m` e a combinação de nome e cidade como `Bruno - São Paulo`. O programa também exibiu duas mensagens personalizadas e uma tabela com as três informações fornecidas pelo usuário.
+Com as entradas `Bruno`, `30` e `Azul`, a execução exibiu idade `030`, altura `1.70m`, o texto `Bruno - São Paulo` e as informações digitadas na tabela. A execução terminou sem erro.
 
-A prática demonstrou como `print()` pode apresentar os mesmos dados de diferentes maneiras e tornar a comunicação com o usuário mais clara. Um cuidado identificado foi distinguir a formatação numérica da unidade de medida: aplicar `.2f` ao valor `170` não o converte de centímetros para metros; por isso, a altura passou a ser representada como `1.70`. A interação com `input()` e o alinhamento da tabela complementam as saídas básicas. O campo idade ainda exige um número inteiro válido; tratar entradas incorretas é uma melhoria futura.
+A prática mostra como os mesmos dados podem ser apresentados de formas diferentes. Os cuidados centrais são separar o conteúdo de sua formatação, escolher o separador e controlar a quebra de linha. A altura está expressa em metros: `.2f` apenas muda a apresentação do número. A idade digitada ainda precisa ser um inteiro válido; esse campo não tem validação de texto.
+
+**Capturas de tela exigidas pelo item 6 — pendentes:**
+
+- [ ] Inserir uma captura real das saídas iniciais, mostrando `030`, `1.70m` e o uso de `sep`.
+- [ ] Inserir uma captura real da interação e da tabela com nome, idade e cor favorita.
+
+As verificações descritas acima foram feitas pela execução do programa; ainda é necessário acrescentar as imagens para concluir a entrega.
+
+**Referência:** [Roteiros de aulas práticas — Introdução à Programação Estruturada](https://drive.google.com/file/d/1wm81dvjvkJURknlRIfU1XtUoBKhSsev1/view), roteiro 01, item 6.

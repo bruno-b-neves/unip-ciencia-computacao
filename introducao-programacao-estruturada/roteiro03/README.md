@@ -1,74 +1,74 @@
-# Roteiro 03 — Estruturas Condicionais em Python
+# Roteiro 03 — Estruturas condicionais
 
 **Disciplina:** Introdução à Programação Estruturada · **Semestre:** 1º · **Aluno:** Bruno Neves
 
 ## 1. Resumo teórico
 
-As estruturas condicionais permitem tomar decisões e controlar o fluxo de execução de um programa. O comando `if` verifica uma condição e executa seu bloco quando ela é verdadeira. O `elif` verifica uma condição alternativa quando as anteriores não foram atendidas. O `else` executa o bloco final quando nenhuma condição da sequência foi satisfeita. Em uma sequência de `if`, `elif` e `else`, apenas o primeiro bloco cuja condição é verdadeira é executado; o `else` é utilizado quando nenhum deles se aplica.
+Estruturas condicionais escolhem quais instruções executar conforme o resultado de uma expressão lógica. `if` testa uma condição; `elif` testa outra quando as anteriores não foram atendidas; e `else` executa o caso restante. A indentação define quais instruções pertencem a cada bloco. Em uma cadeia `if/elif/else`, apenas o primeiro bloco cuja condição é verdadeira é executado.
 
-Os blocos são identificados pela indentação, normalmente com quatro espaços. Operadores como `>=`, `<` e `==` permitem comparar valores. O operador `and` exige que as condições combinadas sejam verdadeiras, enquanto `or` exige que pelo menos uma seja verdadeira. No exercício, essas estruturas verificam se o aniversário já ocorreu e permitem classificar um triângulo a partir das medidas dos lados.
+Operadores como `==`, `<` e `>=` comparam valores. `and` exige que as condições sejam verdadeiras em conjunto, enquanto `or` aceita que pelo menos uma seja verdadeira. No cálculo de idade, comparar mês e dia evita considerar completos os anos antes do aniversário. Na classificação de triângulos, as comparações distinguem três lados iguais, apenas dois iguais e três diferentes.
 
 ## 2. Código-fonte comentado
 
-O código mantém a solução sequencial do exercício, utilizando entradas, operações e condições. Na classificação de triângulos, foi acrescentada a verificação de lados positivos e da condição de existência antes da classificação.
+O programa lê as datas atual e de nascimento, calcula a idade considerando o aniversário e verifica o limite de 18 anos proposto na atividade. Em seguida, classifica os três lados informados.
+
+### Verificação de idade e classificação de triângulos
+
+Arquivo: [estruturas-condicionais.py](estruturas-condicionais.py).
 
 ```python
-# DESAFIO INICIAL — Verificação de idade para CNH.
-# input() lê os dados; int() permite comparar e calcular os valores numéricos.
-# As datas informadas devem ser válidas e o nascimento não pode estar no futuro.
-dia_hoje = int(input('Digite o dia atual (1 a 31): '))
-mes_hoje = int(input('Digite o mês atual (1 a 12): '))
-ano_hoje = int(input('Digite o ano atual: '))
-dia_nascimento = int(input('Digite o dia do seu nascimento (1 a 31): '))
-mes_nascimento = int(input('Digite o mês do seu nascimento (1 a 12): '))
-ano_nascimento = int(input('Digite o ano do seu nascimento: '))
 
-# A diferença entre os anos é ajustada se o aniversário ainda não aconteceu.
-idade = ano_hoje - ano_nascimento
+# * Verificação de Idade para CNH
+# ? Este programa verifica se uma pessoa pode tirar a carteira de habilitação (CNH) com base em sua idade.
+# ? Se a idade for maior ou igual a 18, o programa informa que a pessoa pode tirar a CNH.
+# ? Caso contrário, informa que não pode.
+
+# Leitura da data de hoje
+dia_hoje = int(input('Digite o dia atual (1 a 31): ')) # Solicita ao usuário que digite o dia atual
+mes_hoje = int(input('Digite o mês atual (1 a 12): ')) # Solicita ao usuário que digite o mês atual
+ano_hoje = int(input('Digite o ano atual (ex: 2024): ')) # Solicita ao usuário que digite o ano atual
+
+# Leitura da data de nascimento
+dia_nascimento = int(input('Digite o dia do seu nascimento (1 a 31): ')) # Solicita ao usuário que digite o dia do seu nascimento
+mes_nascimento = int(input('Digite o mês do seu nascimento (1 a 12): ')) # Solicita ao usuário que digite o mês do seu nascimento
+ano_nascimento = int(input('Digite o ano do seu nascimento (ex: 2000): ')) # Solicita ao usuário que digite o ano do seu nascimento
+
+idade = ano_hoje - ano_nascimento # Calcula a idade com base no ano atual e no ano de nascimento
+
+# Desconta um ano se a pessoa ainda não fez aniversário neste ano
 if mes_hoje < mes_nascimento:
-    idade = idade - 1
+    idade = idade - 1 # Se o mês atual for menor que o mês de nascimento, subtrai 1 da idade
 elif mes_hoje == mes_nascimento and dia_hoje < dia_nascimento:
-    idade = idade - 1
+    idade = idade - 1 # Se o mês atual for igual ao mês de nascimento e o dia atual for menor que o dia de nascimento, subtrai 1 da idade
 
-# A condição separa as pessoas que atingiram 18 anos das que ainda não atingiram.
-print(f'Você tem {idade} anos.')
+print(f"Você tem {idade} anos.") # Exibe a idade calculada
+
 if idade >= 18:
-    print('Você tem idade suficiente para tirar a CNH.')
+    print("Você tem idade suficiente para tirar a CNH.") # Informa que a pessoa pode tirar a CNH
 else:
-    print('Você não tem idade suficiente para tirar a CNH.')
+    print("Você não tem idade suficiente para tirar a CNH.") # Informa que a pessoa não pode tirar a CNH
 
-# AMPLIAÇÃO — Leitura das medidas com float() para aceitar casas decimais.
-lado1 = float(input('Digite a medida do primeiro lado do triângulo: '))
-lado2 = float(input('Digite a medida do segundo lado do triângulo: '))
-lado3 = float(input('Digite a medida do terceiro lado do triângulo: '))
+# * Ampliação do Desafio
+# * Classificação de Triângulos
+# ? Este programa solicita ao usuário que digite as medidas dos três lados de um
+# ? triângulo e, em seguida, classifica o triângulo com base nessas medidas.
 
-# Antes de classificar, verifica se os lados são positivos e formam um triângulo.
-# A soma de quaisquer dois lados deve ser maior que o terceiro lado.
-if lado1 <= 0 or lado2 <= 0 or lado3 <= 0:
-    print('As medidas dos lados devem ser maiores que zero.')
-elif lado1 + lado2 <= lado3 or lado1 + lado3 <= lado2 or lado2 + lado3 <= lado1:
-    print('As medidas informadas não formam um triângulo.')
-# Três lados iguais: equilátero; dois iguais: isósceles; todos diferentes: escaleno.
-elif lado1 == lado2 == lado3:
-    print('O triângulo é equilátero.')
+lado1 = float(input('Digite a medida do primeiro lado do triângulo: ')) # Solicita ao usuário que digite a medida do primeiro lado
+lado2 = float(input('Digite a medida do segundo lado do triângulo: ')) # Solicita ao usuário que digite a medida do segundo lado
+lado3 = float(input('Digite a medida do terceiro lado do triângulo: ')) # Solicita ao usuário que digite a medida do terceiro lado
+
+if lado1 == lado2 == lado3:
+    print("O triângulo é equilátero.") # Informa que o triângulo é equilátero
 elif lado1 == lado2 or lado1 == lado3 or lado2 == lado3:
-    print('O triângulo é isósceles.')
+    print("O triângulo é isósceles.") # Informa que o triângulo é isósceles
 else:
-    print('O triângulo é escaleno.')
+    print("O triângulo é escaleno.") # Informa que o triângulo é escaleno
 ```
 
-## 3. Verificação e aprimoramentos
+## 3. Verificação da solução e limitações
 
-Os testes de idade consideraram a data atual informada como **20/10/2026**:
+Nos testes com data atual `20/10/2026`, quem nasceu em `20/10/2008` recebeu idade de 18 anos; o nascimento em `21/10/2008` resultou em 17. As medidas `3, 3, 3`, `3, 3, 4` e `3, 4, 5` foram classificadas como equilátero, isósceles e escaleno.
 
-| Situação testada | Resultado obtido |
-| --- | --- |
-| Nascimento em 21/10/2008 | 17 anos; ainda não atingiu a idade solicitada. |
-| Nascimento em 20/10/2008 | 18 anos; atingiu a idade solicitada. |
-| Lados 3, 3 e 3 | Triângulo equilátero. |
-| Lados 3, 3 e 4 | Triângulo isósceles. |
-| Lados 3, 4 e 5 | Triângulo escaleno. |
-| Lados 1, 2 e 3 | As medidas não formam um triângulo. |
-| Lados 0, 3 e 3 | Medida inválida: os lados devem ser positivos. |
+**Limitação da versão:** as datas não são validadas e os lados são classificados sem verificar se formam um triângulo. Por exemplo, `1, 2, 9` produz a classificação escaleno, embora não forme um triângulo. Uma melhoria com condicionais seria exigir lados positivos e que a soma de quaisquer dois lados seja maior que o terceiro.
 
-O ajuste da idade por mês e dia evita considerar apenas a diferença entre os anos. Como aprimoramento, a verificação das medidas impede a classificação de figuras que não são triângulos. A execução pressupõe entradas numéricas, datas válidas e nascimento anterior ou igual à data atual; o código não faz a validação completa do calendário.
+**Referência:** [Roteiros de aulas práticas — Introdução à Programação Estruturada](https://drive.google.com/file/d/1wm81dvjvkJURknlRIfU1XtUoBKhSsev1/view), roteiro 03, item 6.
