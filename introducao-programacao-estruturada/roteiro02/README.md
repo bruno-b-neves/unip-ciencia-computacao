@@ -84,4 +84,4 @@ Foram informados, em sequência, `40` litros, `480` km, o número `357`, peso `7
 
 O exercício evidencia a necessidade de converter os textos de entrada antes de calcular. A versão pressupõe combustível e altura maiores que zero, número de três dígitos e decimal entre 0 e 15. Não há validação desses limites nem tratamento de entradas não numéricas. O cálculo de IMC é apenas uma atividade de operações aritméticas.
 
-**Referência:** [Roteiros de aulas práticas — Introdução à Programação Estruturada](https://drive.google.com/file/d/1wm81dvjvkJURknlRIfU1XtUoBKhSsev1/view), roteiro 02, item 6.
+**Referência:** UNIP — Roteiros de aulas práticas de Introdução à Programação Estruturada, roteiro 02, item 6.

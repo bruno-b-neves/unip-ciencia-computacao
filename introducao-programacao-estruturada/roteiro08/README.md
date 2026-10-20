@@ -133,4 +133,4 @@ As cinco vendas iniciais produziram total `5151.50`, maior venda `1500.00`, meno
 
 **Correção pendente no gerenciador de tarefas:** a exibição começa em 1, mas pop() recebe diretamente o número digitado, como se ele fosse um índice iniciado em zero. Com duas tarefas, escolher `1` remove a segunda; com apenas uma, escolher `1` é rejeitado. É necessário converter a escolha para índice subtraindo um e validar o intervalo. Os menus também pressupõem entradas numéricas; os dados ficam somente na memória durante a execução.
 
-**Referência:** [Roteiros de aulas práticas — Introdução à Programação Estruturada](https://drive.google.com/file/d/1wm81dvjvkJURknlRIfU1XtUoBKhSsev1/view), roteiro 08, item 6.
+**Referência:** UNIP — Roteiros de aulas práticas de Introdução à Programação Estruturada, roteiro 08, item 6.

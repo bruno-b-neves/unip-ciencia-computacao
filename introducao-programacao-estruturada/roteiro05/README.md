@@ -59,4 +59,4 @@ Para `N = 5`, a soma resultou em `15`; começar a contagem em zero não altera e
 
 **Correções pendentes no programa:** os valores `1` e `2` geram `NameError`, porque `range(2, numero)` fica vazio e `i` é usado sem ter recebido valor. É necessário tratar números menores que dois e retirar a referência a `i` da mensagem de número primo. Para `7`, a decisão de primalidade é correta, mas a mensagem diz incorretamente que ele é divisível por `6`, último valor testado. A entrada N também não é validada como positiva.
 
-**Referência:** [Roteiros de aulas práticas — Introdução à Programação Estruturada](https://drive.google.com/file/d/1wm81dvjvkJURknlRIfU1XtUoBKhSsev1/view), roteiro 05, item 6.
+**Referência:** UNIP — Roteiros de aulas práticas de Introdução à Programação Estruturada, roteiro 05, item 6.

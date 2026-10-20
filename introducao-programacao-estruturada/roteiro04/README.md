@@ -61,4 +61,4 @@ Com `1, 2, 3, 4, 6, 8, 10`, apenas os cinco pares foram apresentados e contabili
 
 O contador de pares avança somente quando o resto da divisão por dois é zero. No login, o contador avança a cada erro. A senha fixa atende à demonstração didática, e não representa um sistema real de autenticação. Entradas não numéricas na primeira parte ainda causam erro de conversão.
 
-**Referência:** [Roteiros de aulas práticas — Introdução à Programação Estruturada](https://drive.google.com/file/d/1wm81dvjvkJURknlRIfU1XtUoBKhSsev1/view), roteiro 04, item 6.
+**Referência:** UNIP — Roteiros de aulas práticas de Introdução à Programação Estruturada, roteiro 04, item 6.

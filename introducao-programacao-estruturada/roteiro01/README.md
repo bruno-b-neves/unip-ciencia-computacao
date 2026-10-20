@@ -71,4 +71,4 @@ A prática mostra como os mesmos dados podem ser apresentados de formas diferent
 
 As verificações descritas acima foram feitas pela execução do programa; ainda é necessário acrescentar as imagens para concluir a entrega.
 
-**Referência:** [Roteiros de aulas práticas — Introdução à Programação Estruturada](https://drive.google.com/file/d/1wm81dvjvkJURknlRIfU1XtUoBKhSsev1/view), roteiro 01, item 6.
+**Referência:** UNIP — Roteiros de aulas práticas de Introdução à Programação Estruturada, roteiro 01, item 6.

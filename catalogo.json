@@ -8,10 +8,11 @@
       "path": "introducao-programacao-estruturada",
       "title": "Introdução à Programação Estruturada",
       "semester": 1,
-      "description": "Espaço em preparação para reunir os exercícios e registros de aprendizado em programação estruturada.",
+      "description": "Do primeiro print() ao SQLite: doze roteiros com Python, decisões, laços, funções, coleções e arquivos.",
       "topics": [
-        "Programação",
-        "Exercícios"
+        "Python",
+        "Programação estruturada",
+        "SQLite"
       ]
     },
     {

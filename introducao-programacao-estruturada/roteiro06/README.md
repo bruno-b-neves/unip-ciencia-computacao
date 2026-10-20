@@ -81,4 +81,4 @@ Os testes produziram `5! = 120`, `0! = 1`, `C(5, 2) = 10` e `C(0, 0) = 1`. Para 
 
 **Pontos pendentes:** o desafio inicial pede uma função que retorne o fatorial, mas a primeira função apenas retorna o número validado. A ampliação cria uma nova função interna em vez de reutilizar uma única função de fatorial do desafio inicial. Além disso, n ou k negativos fazem numero_positivo retornar `None`, e o desempacotamento falha com `TypeError` antes da validação seguinte. É necessário validar o retorno antes de desempacotar e organizar uma função de fatorial reutilizável.
 
-**Referência:** [Roteiros de aulas práticas — Introdução à Programação Estruturada](https://drive.google.com/file/d/1wm81dvjvkJURknlRIfU1XtUoBKhSsev1/view), roteiro 06, item 6.
+**Referência:** UNIP — Roteiros de aulas práticas de Introdução à Programação Estruturada, roteiro 06, item 6.

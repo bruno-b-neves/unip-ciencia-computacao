@@ -9,7 +9,7 @@ Meus estudos em Ciência da Computação na UNIP, organizados em livros por disc
 ### 1º semestre
 
 - **Circuitos Lógicos:** em preparação.
-- **Introdução à Programação Estruturada:** em preparação.
+- **[Introdução à Programação Estruturada](introducao-programacao-estruturada/README.md):** doze roteiros de Python, dos primeiros comandos ao SQLite.
 
 ### 2º semestre
 

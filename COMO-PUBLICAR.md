@@ -11,6 +11,7 @@ O site tem uma página inicial com o catálogo de disciplinas e uma página inde
 Endereços previstos após publicar:
 
 - [Catálogo de aprendizados](https://bruno-b-neves.github.io/unip-ciencia-computacao/)
+- [Livro de Introdução à Programação Estruturada](https://bruno-b-neves.github.io/unip-ciencia-computacao/introducao-programacao-estruturada/)
 - [Livro de Banco de Dados](https://bruno-b-neves.github.io/unip-ciencia-computacao/banco-de-dados/)
 
 O envio de alterações para `main` atualiza todo o site. Não há uma publicação separada para cada disciplina: todos os livros disponíveis são incluídos no mesmo site, em subpastas. A disponibilidade efetiva depende da execução bem-sucedida do GitHub Actions.
@@ -49,6 +50,12 @@ Abra [a biblioteca local](http://localhost:8000/). Para encerrar o servidor, use
 ## Livro de Banco de Dados
 
 Os textos continuam nos READMEs de `banco-de-dados/roteiro01` até `roteiro08`. Edite esses arquivos para atualizar os capítulos e mantenha as imagens em `banco-de-dados/images`. Para acrescentar capítulos a esse livro, atualize também sua lista em `banco-de-dados/book/book.js` e a navegação dos READMEs.
+
+## Livro de Introdução à Programação Estruturada
+
+Os textos ficam em `introducao-programacao-estruturada/README.md` e nos READMEs de `roteiro01` até `roteiro12`. Edite esses arquivos para atualizar a apresentação e os capítulos. O leitor está em `introducao-programacao-estruturada/book`, com destaque de código Python, busca e links para baixar os programas de cada atividade.
+
+Para acrescentar ou reorganizar capítulos, atualize a lista `chapters` em `introducao-programacao-estruturada/book/book.js` e a tabela de roteiros do README principal da disciplina. O fluxo existente inclui este livro automaticamente na próxima publicação.
 
 ## Verificação
 

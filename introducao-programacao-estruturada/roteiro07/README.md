@@ -61,4 +61,4 @@ A frase `Roma me tem amor` foi identificada como palíndromo e `Python` como nã
 
 A contagem busca trechos internos, e não apenas palavras inteiras. O teste de palíndromo usa `in`; como o texto e sua inversão têm o mesmo tamanho, ele funciona para os exemplos, embora `==` expresse a intenção com mais clareza. Entradas vazias não são rejeitadas; pontuação e acentos não são normalizados.
 
-**Referência:** [Roteiros de aulas práticas — Introdução à Programação Estruturada](https://drive.google.com/file/d/1wm81dvjvkJURknlRIfU1XtUoBKhSsev1/view), roteiro 07, item 6.
+**Referência:** UNIP — Roteiros de aulas práticas de Introdução à Programação Estruturada, roteiro 07, item 6.

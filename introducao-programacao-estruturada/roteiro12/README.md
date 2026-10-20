@@ -270,4 +270,4 @@ As execuções foram feitas em pastas temporárias, com um banco separado dos ar
 
 **Cuidados e diferenças em relação ao roteiro:** ambos os programas executam `DROP TABLE IF EXISTS aluno` na inicialização, apagando os registros anteriores e recriando a base; portanto, as alterações não são preservadas na próxima execução. A implementação usa `banco_dados.db` e coluna id autoincrementada, enquanto o enunciado indica Banco_Dados.db e Codigo informado no cadastro. Atualizar ou remover um id inexistente ainda exibe mensagem de sucesso, sem verificar quantas linhas foram afetadas. Esses pontos precisam de ajuste para a entrega atender integralmente às funcionalidades pedidas.
 
-**Referência:** [Roteiros de aulas práticas — Introdução à Programação Estruturada](https://drive.google.com/file/d/1wm81dvjvkJURknlRIfU1XtUoBKhSsev1/view), roteiro 12, item 6.
+**Referência:** UNIP — Roteiros de aulas práticas de Introdução à Programação Estruturada, roteiro 12, item 6.

@@ -185,4 +185,4 @@ Em arquivos temporários, foram confirmadas criação, inserção, leitura em UT
 
 Os menus tratam opções inválidas, e a ampliação repete chaves não inteiras e rejeita nomes de entrada e saída escritos de forma idêntica. Não há try/except; arquivos inexistentes ou caminhos inválidos ainda interrompem o programa. O modo w substitui arquivos existentes. A Cifra de César serve à demonstração didática de manipulação de texto.
 
-**Referência:** [Roteiros de aulas práticas — Introdução à Programação Estruturada](https://drive.google.com/file/d/1wm81dvjvkJURknlRIfU1XtUoBKhSsev1/view), roteiro 10, item 6.
+**Referência:** UNIP — Roteiros de aulas práticas de Introdução à Programação Estruturada, roteiro 10, item 6.

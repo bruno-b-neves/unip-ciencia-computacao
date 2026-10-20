@@ -107,4 +107,4 @@ A ampliação foi executada com Python 3.13 e Faker instalado: gerou dez registr
 
 Para instalar o pacote, use `python3.13 -m pip install Faker` no terminal do ambiente em que executará os arquivos. Os dados e notas gerados variam a cada execução; são informações fictícias.
 
-**Referência:** [Roteiros de aulas práticas — Introdução à Programação Estruturada](https://drive.google.com/file/d/1wm81dvjvkJURknlRIfU1XtUoBKhSsev1/view), roteiro 11, item 6.
+**Referência:** UNIP — Roteiros de aulas práticas de Introdução à Programação Estruturada, roteiro 11, item 6.

@@ -71,4 +71,4 @@ Nos testes com data atual `20/10/2026`, quem nasceu em `20/10/2008` recebeu idad
 
 **Limitação da versão:** as datas não são validadas e os lados são classificados sem verificar se formam um triângulo. Por exemplo, `1, 2, 9` produz a classificação escaleno, embora não forme um triângulo. Uma melhoria com condicionais seria exigir lados positivos e que a soma de quaisquer dois lados seja maior que o terceiro.
 
-**Referência:** [Roteiros de aulas práticas — Introdução à Programação Estruturada](https://drive.google.com/file/d/1wm81dvjvkJURknlRIfU1XtUoBKhSsev1/view), roteiro 03, item 6.
+**Referência:** UNIP — Roteiros de aulas práticas de Introdução à Programação Estruturada, roteiro 03, item 6.
