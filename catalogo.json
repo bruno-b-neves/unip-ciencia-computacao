@@ -1,0 +1,68 @@
+{
+  "title": "Cadernos de Computação",
+  "author": "Bruno Neves",
+  "institution": "UNIP",
+  "repository": "https://github.com/bruno-b-neves/unip-ciencia-computacao",
+  "books": [
+    {
+      "path": "introducao-programacao-estruturada",
+      "title": "Introdução à Programação Estruturada",
+      "semester": 1,
+      "description": "Espaço em preparação para reunir os exercícios e registros de aprendizado em programação estruturada.",
+      "topics": [
+        "Programação",
+        "Exercícios"
+      ]
+    },
+    {
+      "path": "circuitos-logicos",
+      "title": "Circuitos Lógicos",
+      "semester": 1,
+      "description": "Espaço reservado para organizar os estudos e as atividades da disciplina de Circuitos Lógicos.",
+      "topics": [
+        "Lógica digital"
+      ]
+    },
+    {
+      "path": "banco-de-dados",
+      "title": "Banco de Dados",
+      "semester": 2,
+      "description": "Da modelagem ao controle de acesso: oito roteiros com SQL Server, consultas, views e stored procedures.",
+      "topics": [
+        "SQL Server",
+        "T-SQL",
+        "Modelagem"
+      ]
+    },
+    {
+      "path": "programacao-orientada-objetos",
+      "title": "Programação Orientada a Objetos",
+      "semester": 2,
+      "description": "Espaço reservado para reunir conceitos, exercícios e registros da disciplina de orientação a objetos.",
+      "topics": [
+        "Programação",
+        "Orientação a objetos"
+      ]
+    },
+    {
+      "path": "lp-banco-de-dados",
+      "title": "Linguagem de Banco de Dados",
+      "semester": 3,
+      "description": "Espaço reservado para os roteiros e as práticas da disciplina de Linguagem de Banco de Dados.",
+      "topics": [
+        "Banco de Dados",
+        "Práticas"
+      ]
+    },
+    {
+      "path": "pratica-programacao-orientada-objetos",
+      "title": "Prática de Programação Orientada a Objetos",
+      "semester": 3,
+      "description": "Espaço reservado para documentar as atividades práticas de programação orientada a objetos.",
+      "topics": [
+        "Orientação a objetos",
+        "Práticas"
+      ]
+    }
+  ]
+}

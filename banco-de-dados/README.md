@@ -5,6 +5,7 @@
 </div>
 
 <div class="book-entry">
+  <a href="../README.md">← Todos os aprendizados</a> ·
   <a href="https://bruno-b-neves.github.io/unip-ciencia-computacao/banco-de-dados/">📖 Ler em formato de livro</a> · Disponível após ativar o GitHub Pages.
 </div>
 

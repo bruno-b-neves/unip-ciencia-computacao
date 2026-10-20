@@ -7,3 +7,4 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sidebar{transition:none}}
 @media print{.sidebar,.topbar,.outline,.page-navigation,.progress,.copy,.search-results{display:none!important}.workspace{margin:0}.reading-layout{display:block;padding:0}.code-frame{background:white;color:black}.markdown pre{white-space:pre-wrap}.markdown a{color:black}.chapter-header h1{font-size:30px}}
 @media(max-width:760px){.search-results{z-index:45;top:221px;max-height:calc(100vh - 240px);left:12px;right:12px}}
+.breadcrumb .catalog-crumb{color:var(--muted);text-decoration:none;white-space:nowrap}.breadcrumb .catalog-crumb:hover{color:var(--accent)}

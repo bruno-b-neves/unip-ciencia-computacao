@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#142c36">
+  <meta name="description" content="Biblioteca de aprendizados de Bruno Neves em Ciência da Computação na UNIP. Livros de estudo, roteiros e exercícios organizados por disciplina e semestre.">
+  <title>Cadernos de Computação · Bruno Neves</title>
+  <link rel="icon" type="image/svg+xml" href="assets/biblioteca.svg">
+  <link rel="stylesheet" href="assets/biblioteca.css">
+  <script defer src="assets/biblioteca.js"></script>
+</head>
+<body>
+  <a class="skip" href="#catalogo">Pular para o catálogo</a>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Cadernos de Computação, início"><img src="assets/biblioteca.svg" width="38" height="38" alt=""><span>CADERNOS DE COMPUTAÇÃO<small>Bruno Neves · Ciência da Computação</small></span></a>
+    <nav aria-label="Navegação principal"><a href="#catalogo">Disciplinas</a><a href="#como-ler">Como ler</a><a class="github-link" href="https://github.com/bruno-b-neves/unip-ciencia-computacao" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">BIBLIOTECA DE APRENDIZADOS · UNIP</p>
+        <h1 id="hero-title">Aprender.<br>Praticar.<br><em>Registrar.</em></h1>
+        <p class="intro">Meus estudos em Ciência da Computação, organizados em livros. Um lugar para acompanhar os exercícios, revisitar conceitos e conectar os aprendizados de cada semestre.</p>
+        <a class="primary-button" href="#catalogo">Explorar os cadernos <span aria-hidden="true">↓</span></a>
+      </div>
+      <aside class="featured" aria-label="Livro em destaque">
+        <div class="featured-top"><span>NA ESTANTE</span><span id="featured-semester"></span></div>
+        <div class="book-art" aria-hidden="true"><div class="book-spine"></div><div class="book-cover"><span>CADERNOS DE<br>COMPUTAÇÃO</span><svg viewBox="0 0 100 100" width="95" height="95"><g fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="50" cy="26" rx="28" ry="11"/><path d="M22 26v48c0 15 56 15 56 0V26M22 42c0 15 56 15 56 0M22 58c0 15 56 15 56 0"/></g></svg><strong>Banco<br>de Dados</strong><small>BRUNO NEVES</small></div></div>
+        <div class="featured-bottom"><div><span class="available-dot"></span><span id="featured-meta">Livro de estudos</span></div><a id="featured-link" href="banco-de-dados/">Abrir o livro <span aria-hidden="true">↗</span></a></div>
+      </aside>
+    </section>
+    <section class="library" id="catalogo" aria-labelledby="catalog-title">
+      <div class="section-heading"><div><p class="eyebrow">PERCURSO DE ESTUDOS</p><h2 id="catalog-title">Uma estante em construção.</h2></div><p>Escolha uma disciplina e siga a leitura no seu ritmo.</p></div>
+      <div class="filters">
+        <div class="search-field"><label for="search">Buscar disciplina ou assunto</label><div><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Ex.: SQL, programação, lógica…" autocomplete="off"></div></div>
+        <div class="semester-field"><label for="semester">Semestre</label><select id="semester"><option value="all">Todos os semestres</option></select></div>
+        <p id="result-count" class="result-count" role="status">Carregando catálogo…</p>
+      </div>
+      <div id="catalog-content" aria-live="polite"><p class="loading">Carregando os cadernos de estudo…</p></div>
+      <div class="catalog-note"><span aria-hidden="true">↳</span><p>Os livros disponíveis podem ser abertos agora. As disciplinas em preparação ganham novos capítulos conforme os estudos avançam.</p></div>
+    </section>
+    <section class="reading-guide" id="como-ler" aria-labelledby="reading-title"><div><p class="eyebrow">COMO EXPLORAR</p><h2 id="reading-title">Do catálogo<br>ao próximo capítulo.</h2></div><ol><li><span>01</span><div><h3>Escolha um aprendizado</h3><p>Encontre uma disciplina pelo nome, assunto ou semestre.</p></div></li><li><span>02</span><div><h3>Abra o livro</h3><p>Use o sumário e os links entre capítulos para acompanhar os roteiros.</p></div></li><li><span>03</span><div><h3>Explore a prática</h3><p>Leia os relatórios e consulte os códigos e as evidências disponíveis em cada atividade.</p></div></li></ol></section>
+  </main>
+  <footer class="site-footer"><p>Bruno Neves <span>·</span> Ciência da Computação <span>·</span> UNIP</p><p>Um registro contínuo de aprendizado.</p><a href="https://github.com/bruno-b-neves/unip-ciencia-computacao" target="_blank" rel="noopener noreferrer">Ver repositório ↗</a></footer>
+  <noscript><p class="noscript">Ative o JavaScript para filtrar o catálogo. Você também pode <a href="banco-de-dados/">abrir o livro de Banco de Dados</a> ou consultar os <a href="https://github.com/bruno-b-neves/unip-ciencia-computacao">arquivos no GitHub</a>.</p></noscript>
+</body>
+</html>
