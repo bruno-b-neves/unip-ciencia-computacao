@@ -40,7 +40,47 @@
     const controls = document.getElementById('featured-controls');
     const previous = document.getElementById('featured-prev');
     const next = document.getElementById('featured-next');
+    const toggle = document.getElementById('featured-toggle');
+    const playbackIcon = document.getElementById('featured-playback-icon');
+    const progress = document.getElementById('featured-progress-fill');
+    const delay = 6000;
     let current = 0;
+    let paused = false;
+    let timer;
+    let remaining = delay;
+    let startedAt = null;
+    let progressAnimation;
+
+    function stopClock() {
+      window.clearTimeout(timer);
+      if (startedAt !== null) remaining = Math.max(0, remaining - (performance.now() - startedAt));
+      startedAt = null;
+      progressAnimation?.cancel();
+      progress.style.transform = `scaleX(${1 - remaining / delay})`;
+    }
+
+    function schedule(reset = false) {
+      stopClock();
+      if (reset) remaining = delay;
+      const start = `scaleX(${1 - remaining / delay})`;
+      progress.style.transform = start;
+      if (ready.length > 1 && !paused && !document.hidden) {
+        startedAt = performance.now();
+        progressAnimation = progress.animate?.([{transform:start}, {transform:'scaleX(1)'}], {
+          duration:remaining, easing:'linear', fill:'forwards'
+        });
+        timer = window.setTimeout(() => show(current + 1, true, false), remaining);
+      }
+    }
+
+    function setPaused(value) {
+      paused = value;
+      const label = paused ? 'Retomar troca automática' : 'Pausar troca automática';
+      toggle.setAttribute('aria-label', label);
+      toggle.setAttribute('title', label);
+      playbackIcon.setAttribute('d', paused ? 'm9 5 10 7-10 7Z' : 'M9 6v12M15 6v12');
+      schedule();
+    }
     dots.replaceChildren();
     ready.forEach((book, index) => {
       const button = document.createElement('button');
@@ -51,7 +91,7 @@
       dots.append(button);
     });
 
-    function show(index, animate = true) {
+    function show(index, animate = true, announce = true) {
       current = (index + ready.length) % ready.length;
       const book = ready[current], style = styles[book.path];
       featured.dataset.book = book.path;
@@ -66,23 +106,32 @@
       link.setAttribute('href', `${book.path}/`);
       link.setAttribute('aria-label', `Abrir o livro ${book.title}`);
       slide.setAttribute('aria-label', `${current + 1} de ${ready.length}: ${book.title}`);
-      document.getElementById('featured-position').textContent = `${String(current + 1).padStart(2,'0')} / ${String(ready.length).padStart(2,'0')}`;
-      document.getElementById('featured-announcement').textContent = `${book.title}. ${semesterLabel(book.semester)}. Livro ${current + 1} de ${ready.length}.`;
+      if (announce) document.getElementById('featured-announcement').textContent = `${book.title}. ${semesterLabel(book.semester)}. Livro ${current + 1} de ${ready.length}.`;
       [...dots.children].forEach((button, i) => button.setAttribute('aria-pressed', String(i === current)));
       if (animate && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         slide.animate?.([{opacity:0.4, transform:'translateX(8px)'},{opacity:1, transform:'translateX(0)'}], {duration:200, easing:'ease-out'});
       }
+      schedule(true);
     }
 
     controls.hidden = ready.length < 2;
     previous.disabled = next.disabled = ready.length < 2;
+    toggle.addEventListener('click', () => setPaused(!paused));
+    // Uma aba em segundo plano não precisa continuar trocando os livros.
+    document.addEventListener('visibilitychange', () => schedule());
+    window.addEventListener('pagehide', stopClock);
+    window.addEventListener('pageshow', () => schedule());
+    // A leitura por teclado fica estável até o visitante escolher retomar.
+    featured.addEventListener('focusin', event => {
+      if (event.target !== toggle && event.target.matches(':focus-visible')) setPaused(true);
+    });
     previous.addEventListener('click', () => show(current - 1));
     next.addEventListener('click', () => show(current + 1));
     featured.addEventListener('keydown', event => {
       if (event.altKey || event.ctrlKey || event.metaKey) return;
       const destinations = {ArrowLeft: current - 1, ArrowRight: current + 1, Home: 0, End: ready.length - 1};
       if (!(event.key in destinations) || ready.length < 2) return;
-      event.preventDefault(); show(destinations[event.key]);
+      event.preventDefault(); setPaused(true); show(destinations[event.key]);
     });
     let touchStart;
     const art = document.getElementById('featured-art');
@@ -96,7 +145,7 @@
       if (Math.abs(dx) > 40 && Math.abs(dy) < Math.abs(dx) * 0.65 && ready.length > 1) show(current + (dx < 0 ? 1 : -1));
     });
     art.addEventListener('pointercancel', () => { touchStart = undefined; });
-    show(current, false);
+    show(current, false, false);
   }
 
   function render() {

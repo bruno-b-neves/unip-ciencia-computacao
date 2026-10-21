@@ -7,8 +7,8 @@
   <meta name="description" content="Biblioteca de aprendizados de Bruno Neves em Ciência da Computação na UNIP. Livros de estudo, roteiros e exercícios organizados por disciplina e semestre.">
   <title>Cadernos de Computação · Bruno Neves</title>
   <link rel="icon" type="image/svg+xml" href="assets/biblioteca.svg">
-  <link rel="stylesheet" href="assets/biblioteca.css">
-  <script defer src="assets/biblioteca.js"></script>
+  <link rel="stylesheet" href="assets/biblioteca.css?v=20261021-3">
+  <script defer src="assets/biblioteca.js?v=20261021-3"></script>
 </head>
 <body>
   <a class="skip" href="#catalogo">Pular para o catálogo</a>
@@ -33,10 +33,16 @@
             <div class="featured-bottom"><div><span class="available-dot"></span><span id="featured-meta">Livro de estudos</span></div><a id="featured-link" href="banco-de-dados/">Abrir o livro <span aria-hidden="true">↗</span></a></div>
           </div>
         </div>
-        <div class="featured-controls" id="featured-controls" role="group" aria-label="Navegar pelos livros" hidden>
-          <button class="featured-arrow" id="featured-prev" type="button" aria-label="Livro anterior" aria-controls="featured-slide"><span aria-hidden="true">←</span></button>
-          <div class="featured-pagination"><div class="featured-dots" id="featured-dots" role="group" aria-label="Escolher um livro"></div><span class="featured-position" id="featured-position" aria-hidden="true"></span></div>
-          <button class="featured-arrow" id="featured-next" type="button" aria-label="Próximo livro" aria-controls="featured-slide"><span aria-hidden="true">→</span></button>
+        <div class="featured-controls" id="featured-controls" hidden>
+          <div class="featured-toolbar">
+            <div class="featured-dots" id="featured-dots" role="group" aria-label="Escolher um livro"></div>
+            <div class="featured-actions" role="group" aria-label="Navegar pelos livros">
+              <button class="featured-control" id="featured-prev" type="button" aria-label="Livro anterior" title="Livro anterior" aria-controls="featured-slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+              <button class="featured-control" id="featured-toggle" type="button" aria-label="Pausar troca automática" title="Pausar troca automática" aria-controls="featured-slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path id="featured-playback-icon" d="M9 6v12M15 6v12"/></svg></button>
+              <button class="featured-control" id="featured-next" type="button" aria-label="Próximo livro" title="Próximo livro" aria-controls="featured-slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
+            </div>
+          </div>
+          <div class="featured-progress" aria-hidden="true"><span id="featured-progress-fill"></span></div>
         </div>
         <p class="sr-only" id="featured-announcement" role="status" aria-live="polite" aria-atomic="true"></p>
       </aside>
